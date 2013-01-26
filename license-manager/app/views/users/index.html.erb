@@ -1,0 +1,70 @@
+<div class="block">
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+		<h2><%= t('user.user_list')%></h2>
+		<ul>
+			<li>
+				<%= link_to t('user.create_user'),new_user_path %>
+			</li>
+			<li>
+				<%= form_tag search_users_path,:id=>'search_form' %>
+				<%= text_field_tag 'search','search',:class=>'text'%>
+				</form>
+			</li>
+		</ul>
+	</div>
+	<!-- .block_head ends -->
+	<div class="block_content">
+		<div class="message success">
+			<p>
+				<%= flash[:notice]%>
+			</p>
+		</div>
+		<%= form_tag lock_or_unlock_users_path,:method => :post ,:id=>"lock_form"%>
+		<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+			<thead>
+				<tr>
+					<th width="10"> <%= check_box_tag :check_all,1,false,:class=>'check_all'%> </th>
+					<th><%= t('user.login_name')%></th>
+					<th><%= t('user.name')%></th>
+					<th><%= t('user.email')%></th>
+					<th><%= t('user.lock')%></th>
+					<th><%= t('user.admin')%></th>
+					<th><%= t('user.last_login_ip')%></th>
+					<th><%= t('user.last_login_time')%></th>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+			</thead>
+			<tbody>
+				<% @users.each do |user| %>
+				<tr>
+					<%= hidden_field_tag 'is_lock',user.is_lock.to_s + "_" + user.id.to_s%> 
+					<td><%= check_box_tag 'ck_user_ids[]',user.id,false%></td>
+					<td><%= link_to user.login_name,user%></td>
+					<td><%= user.name %></td>
+					<td><%= user.email %></td>
+					<td><%= get_is_lock(user.is_lock) %></td>
+					<td><%= get_is_admin(user.is_admin) %></td>
+					<td><%= user.last_login_ip %></td>
+					<td><%= format_time(user.last_login_time) %></td>
+					<td class="update"><%= link_to t('global.update'),edit_user_path(user)%></td>
+					<td class="delete"> <%= link_to t('user.lock'),lock_or_unlock_user_path(user,:unlock_or_lock=>'lock'),:confirm=> t('user.lock_tip'),:method=>:put unless user.is_lock%>
+					<%= link_to t('user.unlock'),lock_or_unlock_user_path(user,:unlock_or_lock=>'unlock'),:confirm=> t('user.unlock_tip'),:method=>:put if user.is_lock%> </td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<div class="tableactions">
+			<%= select_tag 'unlock_or_lock',lock_list.html_safe,:prompt=>t('global.please_select') %>
+			<%= submit_tag t('global.submit'),:class=>'submit tiny'%>
+		</div>
+		</form>
+		<%= paginate @users%>
+	</div>
+	<div class="bendl"></div>
+	<div class="bendr"></div>
+	<!-- .block_cotent ends -->
+</div>
+<%= javascript_include_tag "licensemanager/users/index" %>

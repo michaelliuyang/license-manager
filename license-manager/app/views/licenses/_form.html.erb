@@ -1,0 +1,78 @@
+<div class="block_content">
+	<div class="message errormsg">
+		<p><%=flash[:notice]%></p>
+	</div>
+	<%= form_for(@license) do |f| %>
+	<p>
+		<%= f.label t "license.custom_name" %>
+		<br />
+		<%= f.text_field :custom_name, :class => "text small" %>
+	</p>
+	<p>
+		<%= f.label t "license.gjb_level" %>
+		<br />
+		<select id="license_gjb_level" name="license[gjb_level]" class="styled">
+			<option value='2'>二级</option>
+			<option value='3' selected="selected">三级</option>
+		</select>
+	</p>
+	<p>
+		<%= f.label t 'license.product' %>
+		<br />
+		<% @products.each do |product| %>
+			<input id="<%= product.value%>" name="ck_product_ids[]" type="checkbox" class="checkbox" checked="checked"<%if product.is_must%> disabled<%end%> value="<%= product.id %>" />
+		<%=label_tag product.name %>
+		<% end %>
+	</p>
+	<p>
+		<%= f.label t "license.expires_date" %>
+		<br />
+		<%= f.text_field :expires_date, :class => "text date_picker",:readonly=>'readonly'%>
+	</p>
+	<p>
+		<%= f.label t "license.version" %>
+		<br />
+		<select id="license_version" name="license[version]" class="styled">
+			<%= @versions.each do |version| %> 
+				<option value="<%= version %>"><%= version %></option>
+			<% end %>
+		</select>
+	</p>
+	<p>
+		<%= f.label t "license.local_check_type" %>
+		<br />
+		<%=select_tag 'license[local_check_type]',local_check_type_for_select.html_safe,:class=>'styled'%>
+	</p>
+	<p id='local_check_p' style="display: none;">
+		<%= f.label t "license.mac_label" %>
+		<br />
+		<%= f.text_field :local_check, :class => "text small" %>
+	</p>
+	<p>
+		<%= f.label t "license.user_number" %>
+		<br />
+		<%= f.number_field :user_number, :class => "number small", :value => "20" %>
+	</p>
+	<p>
+		<%= f.label t "license.publish_content" %>
+		<br />
+		<%= f.text_area :publish_content %>
+	</p>
+	<p>
+		<%= f.label t "license.publish_reason" %>
+		<br />
+		<%= f.text_area :publish_reason %>
+	</p>
+	<p>
+		<%= f.label t "license.memo" %>
+		<br />
+		<%= f.text_area :memo %>
+	</p>
+	<hr />
+	<p>
+		<%= f.submit :class => "submit small", :value => t("global.submit") %>
+		<%=button_tag t('global.back'),:type=>'button',:class=>'submit',:onclick=>"location.href='" + licenses_path + "'"%>
+	</p>
+	<% end %>
+</div>
+<%= javascript_include_tag "licensemanager/licenses/form" %>

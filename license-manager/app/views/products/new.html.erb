@@ -1,0 +1,16 @@
+<div class="block">
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+		<h2><%= t "product.new" %></h2>
+		<ul>
+			<li><%= link_to t('product.list'), products_path %></li>
+		</ul>
+		
+	</div>
+	<!-- .block_head ends -->
+	<%= render 'form' %> <!-- .block_content ends -->
+	<div class="bendl"></div>
+	<div class="bendr"></div>
+</div>
+<!-- .block ends -->

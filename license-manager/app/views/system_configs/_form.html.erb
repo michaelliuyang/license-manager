@@ -1,0 +1,38 @@
+<div class="block_content">
+
+	<%= form_for(@system_config) do |f| %>
+	<% if @system_config.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@system_config.errors.count, "error") %> prohibited this system_config from being saved:</h2>
+
+		<% @system_config.errors.full_messages.each do |msg| %>
+		<div class="message errormsg">
+			<p>
+				<%= msg %>
+			</p>
+		</div>
+		<% end %>
+	</div>
+	<% end %>
+
+	<p>
+		<%= f.label t "system_config.system_name" %>
+		<br />
+		<%= f.text_field :site_name, :class => "text small" %>
+	</p>
+	
+	<p>
+		<%= f.label t "system_config.license_path" %>
+		<br />
+		<%= f.text_field :license_path, :class => "text medium" %>
+		
+		<input id="test_path" class="submit" type="button" value="<%= t "global.test" %>" />
+	</p>
+	<div id="test_path_error" class="message errormsg"><p></p></div>
+	<div id="test_path_success" class="message success"><p></p></div>
+	<p>
+		<%= f.submit :class => "submit small", :value => t("global.submit") %>
+	</p>
+	<% end %>
+</div>
+<%= javascript_include_tag "licensemanager/system_configs/form" %>

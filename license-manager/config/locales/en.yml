@@ -1,0 +1,20 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  global:
+    y: yes
+    n: no
+    create: create
+    license_manager: License Manager
+  user:
+    login_name: login name
+    password: password
+    name: name
+    email: email
+    is_lock: is lock
+    is_admin: is admin
+    password_confirmation: confirm your password
+    user_list: List Users
+    last_login_time: Last login time
+    last_login_ip: Last login IP

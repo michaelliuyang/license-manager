@@ -1,0 +1,366 @@
+# Logfile created on 2012-06-26 18:14:40 +0800 by logger.rb/31641
+
+
+Started GET "/system_configs/1/edit" for 127.0.0.1 at 2012-06-26 18:14:48 +0800
+Processing by SystemConfigsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSystemConfig Load (0.3ms)[0m  [1mSELECT `system_configs`.* FROM `system_configs` WHERE `system_configs`.`id` = 1 LIMIT 1[0m
+  Rendered system_configs/_form.html.erb (5.5ms)
+  Rendered system_configs/edit.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 86ms (Views: 24.7ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/system_configs/1/edit" for 127.0.0.1 at 2012-06-26 18:23:07 +0800
+Processing by SystemConfigsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSystemConfig Load (0.4ms)[0m  [1mSELECT `system_configs`.* FROM `system_configs` WHERE `system_configs`.`id` = 1 LIMIT 1[0m
+  Rendered system_configs/_form.html.erb (5.1ms)
+  Rendered system_configs/edit.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 84ms (Views: 23.8ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/application-04ebc81ad62d1f15338a3aa681c7c6ae.css" for 127.0.0.1 at 2012-06-26 18:23:07 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-04ebc81ad62d1f15338a3aa681c7c6ae.css"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/liuyang/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/liuyang/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/liuyang/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/assets/application-04ebc81ad62d1f15338a3aa681c7c6ae.css" for 127.0.0.1 at 2012-06-26 18:23:07 +0800
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-04ebc81ad62d1f15338a3aa681c7c6ae.css"):
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/liuyang/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/liuyang/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/liuyang/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+Compiled jquery.js  (24ms)  (pid 47796)
+Compiled jquery_ujs.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/ajaxupload.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/facebox.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.date_input.pack.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.filestyle.mini.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.pngfix.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.select_skin.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.tablesorter.min.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.visualize.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.visualize.tooltip.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.wysiwyg.js  (0ms)  (pid 47796)
+Compiled application.js  (175ms)  (pid 47796)
+Compiled licensemanager/licenses/form.js  (0ms)  (pid 47796)
+Compiled licensemanager/licenses/index.js  (0ms)  (pid 47796)
+Compiled licensemanager/products/form.js  (0ms)  (pid 47796)
+Compiled licensemanager/products/index.js  (0ms)  (pid 47796)
+Compiled licensemanager/system_configs/form.js  (76ms)  (pid 47796)
+Compiled licensemanager/system_configs/system_configs.js  (3ms)  (pid 47796)
+Compiled licensemanager/users/form.js  (0ms)  (pid 47796)
+Compiled licensemanager/users/index.js  (0ms)  (pid 47796)
+Compiled licensemanager/users/login.js  (0ms)  (pid 47796)
+Compiled licensemanager/users/update_password.js  (0ms)  (pid 47796)
+Compiled date_input.css  (0ms)  (pid 47796)
+Compiled facebox.css  (0ms)  (pid 47796)
+Compiled jquery.wysiwyg.css  (0ms)  (pid 47796)
+Compiled licenses.css  (8ms)  (pid 47796)
+Compiled products.css  (1ms)  (pid 47796)
+Compiled scaffolds.css  (1ms)  (pid 47796)
+Compiled style.css  (0ms)  (pid 47796)
+Compiled system_configs.css  (1ms)  (pid 47796)
+Compiled users.css  (1ms)  (pid 47796)
+Compiled visualize.css  (0ms)  (pid 47796)
+Compiled application.css  (107ms)  (pid 47796)
+Compiled jquery.js  (3ms)  (pid 47796)
+Compiled jquery_ujs.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/ajaxupload.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/facebox.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.date_input.pack.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.filestyle.mini.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.pngfix.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.select_skin.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.tablesorter.min.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.visualize.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.visualize.tooltip.js  (0ms)  (pid 47796)
+Compiled jqueryplugin/jquery.wysiwyg.js  (0ms)  (pid 47796)
+Compiled application.js  (112ms)  (pid 47796)
+Compiled licensemanager/licenses/form.js  (0ms)  (pid 47796)
+Compiled licensemanager/licenses/index.js  (0ms)  (pid 47796)
+Compiled licensemanager/products/form.js  (0ms)  (pid 47796)
+Compiled licensemanager/products/index.js  (0ms)  (pid 47796)
+Compiled licensemanager/system_configs/form.js  (70ms)  (pid 47796)
+Compiled licensemanager/system_configs/system_configs.js  (3ms)  (pid 47796)
+Compiled licensemanager/users/form.js  (0ms)  (pid 47796)
+Compiled licensemanager/users/index.js  (0ms)  (pid 47796)
+Compiled licensemanager/users/login.js  (0ms)  (pid 47796)
+Compiled licensemanager/users/update_password.js  (0ms)  (pid 47796)
+Compiled date_input.css  (0ms)  (pid 47796)
+Compiled facebox.css  (0ms)  (pid 47796)
+Compiled jquery.wysiwyg.css  (0ms)  (pid 47796)
+Compiled licenses.css  (5ms)  (pid 47796)
+Compiled products.css  (1ms)  (pid 47796)
+Compiled scaffolds.css  (0ms)  (pid 47796)
+Compiled style.css  (0ms)  (pid 47796)
+Compiled system_configs.css  (1ms)  (pid 47796)
+Compiled users.css  (1ms)  (pid 47796)
+Compiled visualize.css  (0ms)  (pid 47796)
+Compiled application.css  (77ms)  (pid 47796)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-06-26 18:26:48 +0800
+Processing by ProductsController#index as HTML
+Redirected to http://localhost:3000/users/login
+Filter chain halted as :validate_user_logined rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2012-06-26 18:26:48 +0800
+Processing by UsersController#login as HTML
+  Rendered users/_login_form.html.erb (1.7ms)
+  Rendered users/login.html.erb within layouts/login_layout (25.8ms)
+Completed 200 OK in 35ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2012-06-26 18:26:51 +0800
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1p2tzT4/7q4xDR5eIwJI+c7N63vTft4Mi3WehMraLvU=", "login_name"=>"admin", "password"=>"[FILTERED]", "submit"=>"登录"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `users` WHERE `users`.`login_name` = 'admin'[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`login_name` = 'admin' LIMIT 1
+  [1m[36mSystemConfig Load (0.2ms)[0m  [1mSELECT `system_configs`.* FROM `system_configs` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `system_configs`.* FROM `system_configs` LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  UPDATE `users` SET `last_login_time` = '2012-06-26 18:26:51', `updated_at` = '2012-06-26 18:26:51' WHERE `users`.`id` = 1
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 84ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-06-26 18:26:51 +0800
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` ORDER BY name LIMIT 10 OFFSET 0
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2012-06-27 09:42:48 +0800
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `connect'
+  mysql2 (0.3.11) lib/mysql2/client.rb:44:in `initialize'
+  activerecord (3.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.3) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:303:in `new_connection'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:313:in `checkout_new_connection'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:237:in `block (2 levels) in checkout'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:232:in `loop'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:232:in `block in checkout'
+  /Users/liuyang/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:229:in `checkout'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:95:in `connection'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:398:in `retrieve_connection'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_specification.rb:168:in `retrieve_connection'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_specification.rb:142:in `connection'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.3) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:467:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `_run__334842570785734634__call__1384031855147315630__callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.3) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.3) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.3) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.3) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.3) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.3) lib/rails/engine.rb:479:in `call'
+  railties (3.2.3) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.3) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/liuyang/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/liuyang/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/liuyang/.rvm/rubies/ruby-1.9.3-p0/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/products" for 127.0.0.1 at 2012-06-27 09:43:51 +0800
+Processing by ProductsController#index as HTML
+Redirected to http://localhost:3000/users/login
+Filter chain halted as :validate_user_logined rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2012-06-27 09:43:51 +0800
+Processing by UsersController#login as HTML
+  Rendered users/_login_form.html.erb (1.7ms)
+  Rendered users/login.html.erb within layouts/login_layout (29.3ms)
+Completed 200 OK in 42ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2012-06-27 09:43:54 +0800
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YxiawioEFMkeSa5owWndCbPEoGY5nR0lIjJ0g3lmKFw=", "login_name"=>"admin", "password"=>"[FILTERED]", "submit"=>"登录"}
+  [1m[36m (3.6ms)[0m  [1mSELECT COUNT(*) FROM `users` WHERE `users`.`login_name` = 'admin'[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`login_name` = 'admin' LIMIT 1
+  [1m[36mSystemConfig Load (0.2ms)[0m  [1mSELECT `system_configs`.* FROM `system_configs` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `system_configs`.* FROM `system_configs` LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.9ms)[0m  UPDATE `users` SET `last_login_time` = '2012-06-27 09:43:54', `updated_at` = '2012-06-27 09:43:54' WHERE `users`.`id` = 1
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 109ms (ActiveRecord: 19.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-06-27 09:43:54 +0800
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` ORDER BY name LIMIT 10 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/licenses" for 127.0.0.1 at 2012-06-27 09:43:59 +0800
+Processing by LicensesController#index as HTML
+  [1m[35mLicense Load (0.2ms)[0m  SELECT `licenses`.* FROM `licenses` ORDER BY created_at DESC LIMIT 10 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `licenses` [0m
+  Rendered licenses/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 23ms (Views: 16.8ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/licenses/new" for 127.0.0.1 at 2012-06-27 09:44:01 +0800
+Processing by LicensesController#new as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products` 
+  [1m[36mSystemConfig Load (0.3ms)[0m  [1mSELECT `system_configs`.* FROM `system_configs` LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `system_configs`.* FROM `system_configs` LIMIT 1
+  Rendered licenses/_form.html.erb (9.6ms)
+  Rendered licenses/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 65ms (Views: 15.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/licenses" for 127.0.0.1 at 2012-06-27 09:44:07 +0800
+Processing by LicensesController#index as HTML
+  [1m[36mLicense Load (0.3ms)[0m  [1mSELECT `licenses`.* FROM `licenses` ORDER BY created_at DESC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `licenses` 
+  Rendered licenses/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-06-27 09:44:09 +0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` ORDER BY name LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `users` 
+  Rendered users/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-06-27 09:44:10 +0800
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (11.3ms)
+  Rendered users/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/exist" for 127.0.0.1 at 2012-06-27 09:44:22 +0800
+Processing by UsersController#exist as */*
+  Parameters: {"login_name"=>"user01"}
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users` WHERE `users`.`login_name` = 'user01'[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-06-27 09:44:22 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YxiawioEFMkeSa5owWndCbPEoGY5nR0lIjJ0g3lmKFw=", "user"=>{"login_name"=>"user01", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "name"=>"user01", "email"=>"ss@ss.com", "is_lock"=>"0", "is_admin"=>"0"}, "commit"=>"创建"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `is_admin`, `is_lock`, `key`, `last_login_ip`, `last_login_time`, `login_name`, `name`, `password`, `updated_at`) VALUES ('2012-06-27 09:44:22', 'ss@ss.com', 0, 0, 'YGSt5FfeizNnmk6QpYZB1u5qp8TjfV', NULL, NULL, 'user01', 'user01', 'd0ac662c99acf813e0fde7cc5643e6f93b45becc5e3d20cfef3f20f00366c566', '2012-06-27 09:44:22')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2012-06-27 09:44:22 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-06-27 09:44:25 +0800
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` ORDER BY name LIMIT 10 OFFSET 0
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `users` [0m
+  Rendered users/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/exit" for 127.0.0.1 at 2012-06-27 09:45:01 +0800
+Processing by ApplicationController#exit as HTML
+Redirected to http://localhost:3000/users/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2012-06-27 09:45:01 +0800
+Processing by UsersController#login as HTML
+  Rendered users/_login_form.html.erb (0.9ms)
+  Rendered users/login.html.erb within layouts/login_layout (1.6ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)

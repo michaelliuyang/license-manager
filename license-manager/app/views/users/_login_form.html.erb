@@ -1,0 +1,15 @@
+<%= form_tag '/users/login' %>
+<p>
+	<%= label_tag t('user.login_name')%>
+	<br />
+	<%= text_field_tag 'login_name',nil,:class=>'text'%>
+</p>
+<p>
+	<%= label_tag t('user.password')%>
+	<br />
+	<%= password_field_tag 'password',nil,:class=>'text' %>
+</p>
+<p>
+	<%= submit_tag t('global.login'),:class=>'submit mid',:name=>'submit'%>
+</p>
+</form>

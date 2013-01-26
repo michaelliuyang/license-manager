@@ -1,0 +1,77 @@
+<div class="block">
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+		<h2><%= get_create_or_update_str(@user)%></h2>
+		<ul>
+			<li>
+				<%= link_to t('user.user_list'),users_path %>
+			</li>
+			<% if(@user.id && @user.id == session[:user][:id]) %>
+				<li>
+					<%= link_to t('user.update_password'),update_password_user_path(@user) %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+	<div class="block_content">
+		<div class="message errormsg">
+			<p></p>
+		</div>
+		<%= form_for(@user) do |f| %>
+		<% if @user.id %>
+		<p>
+			<%= f.label t('user.login_name')+":" %>
+			<%= @user.login_name %>
+		</p>
+		<% end %>
+		<% unless @user.id %>
+		<p>
+			<%= f.label t('user.login_name')+":" %>
+			<br/>
+			<%= f.text_field :login_name,:class=>'text small' %>
+		</p>
+		<p>
+			<%= f.label t('user.password')+":" %>
+			<br/>
+			<%= f.password_field :password,:class=>'text small' %>
+		</p>
+		<p>
+			<%= f.label t('user.password_confirmation')+":" %>
+			<br/>
+			<%= f.password_field :password_confirmation,:class=>'text small' %>
+		</p>
+		<% end %>
+		<p>
+			<%= f.label t('user.name')+":" %>
+			<br/>
+			<%= f.text_field :name,:class=>'text small' %> 
+		</p>
+		<p>
+			<%= f.label t('user.email')+":" %>
+			<br/>
+			<%= f.text_field :email,:class=>'text small' %> 
+		</p>
+		<% if session[:user][:is_admin] %>
+		<p>
+			<%= f.label t('user.lock')+":" %>
+			<input type="hidden" id="userLock" value="<%=@user.is_lock%>">
+			<%= f.radio_button :is_lock,1,:class=>'radio' %><%= f.label t('global.y') %>
+			<%= f.radio_button :is_lock,0,:class=>'radio' %><%= f.label t('global.n') %>
+		</p>
+		<p>
+			<%= f.label t('user.admin')+":" %>
+			<input type="hidden" id="userAdmin" value="<%=@user.is_admin%>">
+			<%= f.radio_button :is_admin,1,:class=>'radio'%><%= f.label t('global.y') %>
+			<%= f.radio_button :is_admin,0,:class=>'radio' %><%= f.label t('global.n') %>
+		</p>
+		<% end %>
+		<p>
+			<%= f.submit :class=>'submit mid' %>
+		</p>
+		<% end %>
+	</div>
+	<div class="bendl"></div>
+	<div class="bendr"></div>
+</div>
+<%= javascript_include_tag "licensemanager/users/form" %>

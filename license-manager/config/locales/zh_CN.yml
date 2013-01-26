@@ -1,0 +1,124 @@
+#encoding: utf-8
+zh_CN: 
+  global:
+    y: 是
+    n: 否
+    create: 创建
+    update: 修改
+    edit: 修改
+    destroy: 删除
+    download: 下载
+    confirm_destroy: 确认删除吗？
+    submit: 提交
+    back: 返回
+    test: 测试
+    login: 登录
+    license_system: QONE LICENSES管理平台
+    license_manager: LICENSES管理
+    exit: 退出
+    welcome: 欢迎您
+    year: 年
+    month: 月
+    day: 日
+    please_select: 请选择
+  user:
+    login_name: 用户名
+    password: 密码
+    current_password: 当前密码
+    new_password: 新密码
+    name: 姓名
+    email: 电子邮件
+    lock: 禁用
+    unlock: 启用
+    admin: 管理员
+    password_confirmation: 再次输入密码
+    user_list: 用户列表
+    update_password: 修改密码
+    last_login_time: 最后登录时间
+    last_login_ip: 最后登录IP
+    show_user_info: 查看用户信息
+    user_list: 用户列表
+    user_manager: 用户管理
+    create_user: 注册新用户
+    create_success: 用户注册成功
+    update_success: 用户更新成功
+    update_pwd_success: 密码更新成功
+    lock_tip: 您确认禁用该用户吗?
+    unlock_tip: 您确认启用该用户吗?
+    locked_success: "用户%{login_name}禁用成功"
+    unlocked_success: "用户%{login_name}启用成功"
+    validate:
+      login_name_is_not_null: 用户名不能为空
+      login_pwd_is_not_null: 密码不能为空
+      name_is_not_null: 姓名不能为空
+      pwd_confirm_error: 两次输入的密码必须相同
+      pwd_length_limit: 密码长度为6到20个字符
+      current_pwd_error: 输入的当前密码错误
+      email_error: 电子邮件格式错误
+      pwd_error: 您输入的密码错误
+      user_no_exist: 您输入的用户不存在
+      user_exist: 该用户已存在
+      user_is_lock: 该用户已经被禁用
+  license:
+    license_list: License列表
+    list: License申请历史
+    custom_name: 客户名称
+    applicant: 申请人
+    publish_reason: 申请原因
+    publish_content: 申请内容
+    expires_date: 过期时间
+    version: 产品版本号
+    gjb_level: GJB等级
+    gjb_level_2: 二级
+    gjb_level_3: 三级
+    local_check_type: 限制类型
+    mac_label: MAC地址
+    ip_laebl: IP地址
+    local_check_mac: 限制MAC地址
+    local_check_ip: 限制IP地址
+    no_local_check: 不限制
+    user_number: 最大并发数
+    memo: 备注
+    new: 申请License
+    show: License详细信息
+    product: 系统模块
+    create_success: License创建成功
+    create_failed: Licesne创建失败
+    update_success: License更新成功
+    delete_failed: License删除失败
+    created_at: 申请时间
+    validate:
+      custom_name_is_not_null: 客户名称不能为空
+      local_check_mac_error: MAC地址格式错误
+      user_number_is_not_null: 最大并发数不能为空
+      license_jar_error: License路径下没有此版本的jar包
+  system_manage: 系统管理
+  system_config:
+    edit: 系统设置
+    system_name: 系统名称
+    license_path: License生成文件夹路径
+    path_has_any_versions: 此文件夹下没有任何License版本信息
+    license_path_error: License生成路径配置错误，请联系管理员
+    create_success: 系统设置创建成功
+    update_success: 系统设置更新成功
+  product:
+    list: 组件设置
+    new: 增加组件
+    edit: 编辑组件
+    name: 组件名称
+    value: 组件值
+    is_must: 是否必选
+    show: 组件详细信息
+    create_success: 组件创建成功
+    update_success: 组件更新成功
+  views:
+    pagination:
+      first: 首页
+      last: 末页
+      previous: «
+      next: »
+      truncate: ...
+  helpers:
+    submit:
+      create: 创建
+      update: 修改

@@ -1,0 +1,25 @@
+<div class="block_content">
+	<div class="message errormsg">
+		<p></p>
+	</div>
+	<%= form_for(@product) do |f| %>
+	<p>
+		<%= f.label t 'product.name' %>
+		<br />
+		<%= f.text_field :name, :class => 'text small' %>
+	</p>
+	<p>
+		<%= f.label t 'product.value' %>
+		<br />
+		<%= f.text_field :value, :class => 'text small' %>
+	</p>
+	<p>
+		<%= f.check_box :is_must, :class => 'checkbox' %>
+		<%= f.label t 'product.is_must' %>
+	</p>
+	<p>
+		<%= f.submit :class => 'submit' %>
+	</p>
+	<% end %>
+</div>
+<%= javascript_include_tag "licensemanager/products/form" %>

@@ -1,0 +1,63 @@
+<div class="block">
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+		<h2><%= t 'product.list'%></h2>
+		<ul>
+			<li>
+				<%= link_to t('product.new'), new_product_path %>
+			</li>
+			<li>
+				<%= form_tag search_products_path,:id=>'search_form' %>
+				<%= text_field_tag 'search','search',:class=>'text'%>
+				</form>
+			</li>
+		</ul>
+	</div>
+	<!-- .block_head ends -->
+	<div class="block_content">
+		<div class="message errormsg">
+			<p>
+				<%= flash[:error]%>
+			</p>
+		</div>
+		<%= form_tag mutiple_delete_products_path, :id=>'delete_form'%>
+		<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+			<thead>
+				<tr>
+					<th width="10">
+					<input type="checkbox" class="check_all" />
+					</th>
+					<th><%= t "product.name" %></th>
+					<th><%= t "product.value" %></th>
+					<th><%= t "product.is_must" %></th>
+					<th>&nbsp;</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @products.each do |product| %>
+				<tr>
+					<td><%= check_box_tag 'ck_product_ids[]',product.id,false%></td>
+					<td><%= link_to product.name, product %></td>
+					<td><%= product.value %></td>
+					<td><%= product.is_must == true ? t('global.y') : t('global.n') %></td>
+					<td><%= link_to t('global.edit'), edit_product_path(product) %></td>
+					<td><%= link_to t('global.destroy'), product, :confirm=> t('global.confirm_destroy'), :method=> :delete %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<div class="tableactions">
+			<%= submit_tag t('global.destroy'),:class=>'submit tiny'%>
+		</div>
+		<!-- .tableactions ends -->
+		</form>
+		<%= paginate @products %>
+	</div>
+	<!-- .block_content ends -->
+	<div class="bendl"></div>
+	<div class="bendr"></div>
+</div>
+<!-- .block ends -->
+<%= javascript_include_tag "licensemanager/products/index" %> 

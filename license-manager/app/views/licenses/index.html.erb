@@ -1,0 +1,76 @@
+<div class="block">
+	<div class="block_head">
+		<div class="bheadl"></div>
+		<div class="bheadr"></div>
+		<h2><%= t 'license.list'%></h2>
+		<ul>
+			<li>
+				<%= link_to t('license.new'), new_license_path %>
+			</li>
+			<li>
+				<%= form_tag search_licenses_path,:id=>'search_form' %>
+				<%= text_field_tag 'search','search',:class=>'text'%>
+				</form>
+			</li>
+		</ul>
+	</div>
+	<!-- .block_head ends -->
+	<div class="block_content">
+		<div class="message errormsg">
+			<p>
+				<%= flash[:error]%>
+			</p>
+		</div>
+		<%= form_tag mutiple_delete_licenses_path, :id=>'delete_form'%>
+		<table cellpadding="0" cellspacing="0" width="100%" class="sortable">
+			<thead>
+				<tr>
+					<th width="10">
+					<input type="checkbox" class="check_all" />
+					</th>
+					<th><%= t 'license.custom_name' %></th>
+					<th><%= t 'license.applicant' %></th>
+					<th><%= t 'license.expires_date' %></th>
+					<th><%= t 'license.gjb_level' %></th>
+					<th><%= t 'license.version' %></th>
+					<th><%= t 'license.local_check_type' %></th>
+					<th><%= t 'license.local_check' %></th>
+					<th><%= t 'license.user_number' %></th>
+					<th><%= t 'license.created_at' %></th>
+					<th>&nbsp;</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @licenses.each do |license| %>
+				<tr>
+					<td><%= check_box_tag 'ck_license_ids[]',license.id,false%></td>
+					<td><%= link_to license.custom_name, license %></td>
+					<td><%= license.applicant %></td>
+					<td><%= license.expires_date %></td>
+					<td><%= show_gjb_level license.gjb_level %></td>
+					<td><%= license.version %></td>
+					<td><%= show_local_check_type license.local_check_type %></td>
+					<td><%= license.local_check %></td>
+					<td><%= license.user_number %></td>
+					<td><%= format_time license.created_at %></td>
+					<td> <% if File.exist? "#{session[:license_path]}/#{license.version}/license_files/license_#{license.id}.dat"%>
+					<%= link_to t('global.download'), download_license_path(license) %>
+					<% else %> <a href="javascript: alert('<%= t('system_config.license_path_error')%>');"><%= t 'global.download'%></a> <% end %> </td>
+					<td class="delete"> <%= link_to t('global.destroy'), license, :confirm=> t('global.confirm_destroy'), :method=> :delete %> </td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<div class="tableactions">
+			<%= submit_tag t('global.destroy'),:class=>'submit tiny'%>
+		</div>
+		</form>
+		<%= paginate @licenses %>
+	</div>
+	<!-- .block_content ends -->
+	<div class="bendl"></div>
+	<div class="bendr"></div>
+</div>
+<!-- .block ends -->
+<%= javascript_include_tag "licensemanager/licenses/index" %> 

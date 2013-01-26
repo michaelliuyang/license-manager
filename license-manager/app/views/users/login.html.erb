@@ -1,0 +1,26 @@
+<div id="hld">
+	<!-- wrapper begins -->
+	<div class="wrapper">
+		<div class="block small center login">
+			<!-- .block_head starts -->
+			<div class="block_head">
+				<div class="bheadl"></div>
+				<div class="bheadr"></div>
+				<h2><%= t('global.login')%></h2>
+			</div>
+			<!-- .block_head ends -->
+			<div class="block_content">
+				<div class="message errormsg">
+					<p id="msg_tip">
+						<%= @login_notice %>
+					</p>
+				</div>
+				<%= render :partial => "users/login_form" %>
+			</div>
+			<!-- .block_content ends -->
+			<div class="bendl"></div>
+			<div class="bendr"></div>
+		</div><!-- .login ends -->
+	</div><!-- wrapper ends -->
+</div>
+<%= javascript_include_tag "licensemanager/users/login" %>

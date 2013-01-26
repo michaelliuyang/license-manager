@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  login_name: MyString
+  password: MyString
+  name: MyString
+  email: MyString
+  last_login_time: 2012-05-25
+  last_login_ip: MyString
+  is_lock: false
+  is_admin: false
+
+two:
+  login_name: MyString
+  password: MyString
+  name: MyString
+  email: MyString
+  last_login_time: 2012-05-25
+  last_login_ip: MyString
+  is_lock: false
+  is_admin: false
